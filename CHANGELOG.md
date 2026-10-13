@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-13 (product portfolio graph)
+
+- **product-portfolio-graph:** new, designed. A weighted graph of how a company's products are used together
+  (built-in, shared data, integrations, bundles, customer stories, release notes), portfolio cohesion, suites,
+  hubs, islands and overlaps, plus feature lists mapped to a shared vocabulary for comparison within the company
+  and against competitors.
+
 ## 2026-10-13 (review of the first full run)
 
 Changed after reviewing the first complete Buildkite run (27 companies, about $2.90 in model calls):
