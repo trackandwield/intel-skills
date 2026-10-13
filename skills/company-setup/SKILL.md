@@ -37,8 +37,9 @@ and news search terms for every company, product and key person.
 
 ## How it works
 
-1. **Read the company's own site:** home page, then the about/leadership, product, pricing, customer and press
-   pages it links to. Social links (YouTube, podcasts, GitHub, X, LinkedIn) are collected from the pages.
+1. **Find and read the company's own site.** A website found by search is only accepted when its domain is the
+   company's own name (`depot.dev` for Depot, not `officedepot.com`). Then read the home page and the
+   about/leadership, product, pricing, customer and press pages it links to; images and PDFs are skipped. Social links (YouTube, podcasts, GitHub, X, LinkedIn) are collected from the pages.
 2. **Extract facts with an LLM using a fixed JSON schema** (structured outputs). Rules given to the model:
    - use only what the pages say, never outside knowledge; leave a field empty when it isn't stated
    - every fact cites the page it came from
@@ -51,10 +52,13 @@ and news search terms for every company, product and key person.
    - **direct:** same job, same buyer. These are found and profiled in full, the same way as the company.
    - **adjacent:** partial overlap, a broader suite, or a different buyer. These are recorded with their
      competing products only.
+   Names are tidied ("GitHub Actions (GitHub)" → "GitHub Actions") and a competitor found twice, by name or by
+   website, is merged into one record.
    When the competing product belongs to a much bigger company (e.g. Azure Pipelines at Microsoft), it's
    profiled from the product's own page, not the parent company's.
-5. **Find channels:** the company's own shows in Apple's podcast directory (publisher must match), its YouTube
-   channel, and recently active shows about its categories.
+5. **Find channels:** the company's own shows in Apple's podcast directory and its YouTube channel. The publisher
+   or channel name must be the company itself, so namesakes ("Eddie Trunk" for Trunk) and fan shows are left
+   out. Also recently active shows about its categories.
 6. **Write search terms** in Google News syntax. Names that are common words get context
    (e.g. `"Harness" ("software delivery" OR CI)`).
 7. **Propose everything** with its source page and a confidence level:
@@ -66,7 +70,8 @@ and news search terms for every company, product and key person.
 ## Design decisions
 
 - **Proposed → approved:** discovery is noisy, so a person approves before anything is tracked; rejected items
-  are remembered so they aren't proposed again.
+  are remembered so they aren't proposed again. A wrong match can be rejected with everything found about it in
+  one step, or just its people (for a competitor that's right but too big to profile person by person).
 - **Provenance on every fact:** source URL, date first found, date last confirmed. Any claim that later lands in
   a battlecard can be traced and re-checked.
 - **Re-runs merge, never overwrite:** a second run fills gaps and confirms facts but keeps human edits and approvals.

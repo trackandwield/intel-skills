@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-13 (review of the first full run)
+
+Changed after reviewing the first complete Buildkite run (27 companies, about $2.90 in model calls):
+
+- **company-setup:** a website found by search must be on the company's own domain (the run had matched Depot to
+  Office Depot and Blacksmith to a clothing brand). Competitor names are tidied and duplicates merged by name or
+  website. Image and PDF pages are skipped instead of read as text. Wrong matches can be rejected with
+  everything found about them in one step.
+- **brand-guide:** fonts come only from fonts the site loads (the run had picked Papyrus and an emoji font from
+  CSS fallbacks); logos must be labelled as logos or be the inline SVG in the home link (the run had picked
+  product screenshots); decks must name the company in full.
+- **source-discovery / company-setup:** a company's podcast or YouTube channel must be published under its own
+  name, so namesakes and fan shows are dropped.
+- **person-perspective:** left empty when the sources hold nothing the person said, instead of a note saying so.
+
 ## 2026-10-13 (later)
 
 - **company-setup:** competitors are now marked direct or adjacent, and only direct ones get the full profile.

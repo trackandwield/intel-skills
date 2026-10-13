@@ -23,6 +23,8 @@ A person (name, title, company) and their company's names and aliases.
    - **Summary:** 2-3 sentences on what they talk about and believe
    - **Focus:** the problems they want to solve
    - **Outlook:** where they say the company or market is heading (left empty if they don't say)
+   If the sources hold nothing the person said themselves, the perspective is left empty rather than filled
+   with a note that there was nothing to say.
    - **Points:** theme, claim, exact short quote, source, date
 
 ## Output
