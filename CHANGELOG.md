@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-13 (battlecard choices)
+
+- **battlecard:** the user now chooses which competitors and which sections go on the cards, from an 18-section
+  catalog with two presets (a seller's one-pager and a deep dive). Each section names the information it draws
+  on, so the choice produces a collection plan: what's ready per competitor, and which collectors to build next.
+
 ## 2026-10-13 (confirmed websites, on-topic podcasts)
 
 - **company-setup:** competitor websites are confirmed before use: the page must name the company and be judged to

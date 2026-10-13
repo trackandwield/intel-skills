@@ -40,7 +40,7 @@ shows how it has evolved.
 | Skill | What it does | Status |
 | --- | --- | --- |
 | [Ideal customer profile (per product)](skills/ideal-customer-profile/SKILL.md) | Build an ideal customer profile for each of a company's products from its own evidence. | designed |
-| [Battlecard (grounded asset generation)](skills/battlecard/SKILL.md) | Draft a battlecard (or one-pager, comparison, talking points) comparing a company's product with a competitor's, built only from current, sourced facts and laid out in the company's brand, with every claim traceable. | designed |
+| [Battlecard (grounded asset generation)](skills/battlecard/SKILL.md) | Draft a battlecard (or one-pager, comparison, talking points) comparing a company's product with a competitor's, built only from current, sourced facts and laid out in the company's brand, with every claim traceable. The user picks the competitors and sections. | choosing built; drafting designed |
 | [This is that / this isn't that](skills/this-is-that/SKILL.md) | Compare products and ideas on what they actually do. | designed |
 | [Product portfolio graph](skills/product-portfolio-graph/SKILL.md) | Map how a company's products relate as a weighted graph of how closely they're used together, with a comparable feature list per product, to measure how cohesive a lineup is and where products overlap. | designed |
 | [Release-note history and product trajectory](skills/release-note-trajectory/SKILL.md) | Collect a product's full release-note history and compare what it does today with where its changes point it next, stating each inference with evidence and a date so it can be scored later. | designed |
