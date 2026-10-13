@@ -28,11 +28,10 @@ For the company **and every competitor it finds**:
 | People | Leadership, founders, board, developer advocates, product leads, with titles |
 | History | Dated events: founding, funding rounds, acquisitions, launches, renames, sunsets, leadership changes |
 | Customer stories | Customer, industry, size, region, product used, problem, outcome, champion, quote |
-| Brand | See [brand-guide](../brand-guide/SKILL.md) |
 | People's views | See [person-perspective](../person-perspective/SKILL.md) |
 | Channels | The company's podcasts, YouTube channel, blog, changelog, press page; active podcasts about its categories |
 
-Then, for the tracked company: competitors **per product** (with which of its products each one competes with),
+Then, for the tracked company only: its brand (see [brand-guide](../brand-guide/SKILL.md)); competitors **per product** (with which of its products each one competes with),
 and news search terms for every company, product and key person.
 
 ## How it works
@@ -65,7 +64,8 @@ and news search terms for every company, product and key person.
    - **high:** stated on the company's own page
    - **medium:** reported elsewhere
    - **low:** inferred
-8. **Write a review page** in the company's own brand, listing everything with sources and what the run cost.
+8. **Write a review page** in the company's own brand, binned by company: the tracked company first, then one
+   collapsible section per competitor (direct before adjacent), with a jump list, a filter, sources and what the run cost.
 
 ## Design decisions
 

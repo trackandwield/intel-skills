@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-13 (review page)
+
+- **company-setup:** the review page is binned by company (tracked company first, then each competitor in its own
+  collapsible section, direct before adjacent) instead of one long list per record type. Brand guides are read
+  for the tracked company only; competitors don't need one, and skipping them saves a page fetch and a model call each.
+
 ## 2026-10-13 (verification)
 
 - **evidence-checks:** new, designed. Layered checks for concrete facts: verbatim quote on the page, rule checks,
