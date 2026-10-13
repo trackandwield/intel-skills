@@ -85,5 +85,5 @@ and news search terms for every company, product and key person.
 ## Output
 
 Records for companies, products, plans, people, events, customer stories, appearances and perspectives, all
-proposed; proposed sources (podcasts, YouTube, feeds); a search-terms file; a brand guide per company; a review
+proposed; proposed sources (podcasts, YouTube, feeds); a search-terms file; a brand guide for the tracked company; a review
 page.
