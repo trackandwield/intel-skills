@@ -47,7 +47,12 @@ and news search terms for every company, product and key person.
 3. **Search for more people** (leadership, developer advocates, founders) and keep only those the results say
    currently work there. First names alone are dropped: they can't be matched reliably.
 4. **Find competitors per product** from "alternatives", "competitors" and "vs" searches. Review sites,
-   consultancies and integrations are excluded. Each competitor's own site is found and profiled the same way.
+   consultancies and integrations are excluded. Each competitor is marked:
+   - **direct:** same job, same buyer. These are found and profiled in full, the same way as the company.
+   - **adjacent:** partial overlap, a broader suite, or a different buyer. These are recorded with their
+     competing products only.
+   When the competing product belongs to a much bigger company (e.g. Azure Pipelines at Microsoft), it's
+   profiled from the product's own page, not the parent company's.
 5. **Find channels:** the company's own shows in Apple's podcast directory (publisher must match), its YouTube
    channel, and recently active shows about its categories.
 6. **Write search terms** in Google News syntax. Names that are common words get context
@@ -67,6 +72,10 @@ and news search terms for every company, product and key person.
 - **Re-runs merge, never overwrite:** a second run fills gaps and confirms facts but keeps human edits and approvals.
 - **Each source is listed once,** tagged with every company it serves, so trackers never duplicate work.
 - **Cost is metered per run:** model tokens, dollars and search credits, this run and month to date.
+- **Long runs are resumable:** each company is saved as soon as it's done, and companies profiled in the last
+  week are skipped on a rerun, so a stopped run picks up where it left off.
+- **Depth follows relevance:** the full profile (people, appearances, perspectives) goes to direct competitors.
+  Adjacent ones are named, with their competing products, without spending on their whole company.
 
 ## Output
 

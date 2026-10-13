@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-13 (later)
+
+- **company-setup:** competitors are now marked direct or adjacent, and only direct ones get the full profile.
+  Products of large companies are read from their own product page. Runs save after each company and resume
+  where they stopped. Changed after the first live run turned up 22 competitors, including Microsoft and
+  JetBrains, and spent minutes profiling whole companies whose overlap was one product.
+- **person-perspective:** YouTube Shorts no longer count as appearances.
+
 ## 2026-10-13
 
 - First published set: 23 skills. Built: company setup, brand guide, person perspective, duplicate filter,
