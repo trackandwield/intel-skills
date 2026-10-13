@@ -58,6 +58,9 @@ shows how it has evolved.
 | [Multi-category classifier](skills/multi-category-classifier/SKILL.md) | Tag a product or idea with every category it truly belongs to, not just the best single fit, so search and comparison never miss it. | designed |
 | [Source drift and quality check](skills/source-drift-check/SKILL.md) | Catch a tracked source going bad. | designed |
 | [Preset watch](skills/preset-watch/SKILL.md) | Keep a standing watch on one named company, person or topic across every collected source, catching even passing mentions inside broader content. | designed |
+| [Evidence checks](skills/evidence-checks/SKILL.md) | Check concrete facts automatically: the quoted evidence must be on the page, pass rule checks, be supported according to an independent model and agree with the other records, scored against a hand-verified gold set. | designed |
+| [Dialectic verification](skills/dialectic-verification/SKILL.md) | Verify judgment claims with three agents: thesis makes the claim, antithesis (on a different model) tries to disprove each sub-claim with evidence, synthesis resolves them or escalates to a human. | designed |
+| [Claim versioning](skills/claim-versioning/SKILL.md) | Keep every claim with the period it was true, so a real change is recorded as history and a mistake as a correction. | designed |
 | [Fact freshness and verification](skills/fact-freshness/SKILL.md) | Confirm that the specific facts a draft uses are still true before it ships, re-checking only facts past the staleness window for their kind. Called by battlecard and other asset skills with the exact facts they used. | designed |
 
 **Status key:** *built* runs in the engine; *in testing* is built but still being tuned on real data; *designed*

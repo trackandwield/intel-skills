@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-13 (verification)
+
+- **evidence-checks:** new, designed. Layered checks for concrete facts: verbatim quote on the page, rule checks,
+  a grounding check by an independent model, corroboration for facts that go stale, consistency across records,
+  and a hand-verified gold set for regression testing.
+- **dialectic-verification:** new, designed. Thesis, antithesis and synthesis agents for judgment claims, with
+  typed, evidence-backed objections, one tie-break round, and escalation by how far apart the agents ended up.
+- **claim-versioning:** new, designed. Validity periods on every claim, and a rule for telling an error from a
+  real change, so changes become timeline history instead of overwrites.
+
 ## 2026-10-13 (product portfolio graph)
 
 - **product-portfolio-graph:** new, designed. A weighted graph of how a company's products are used together
