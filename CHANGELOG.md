@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-13 (confirmed websites, on-topic podcasts)
+
+- **company-setup:** competitor websites are confirmed before use: the page must name the company and be judged to
+  be its site against what it does. The clean Buildkite run still had Depot at `depot.com` and Blacksmith at
+  `blacksmith.org`, because a guessed address was accepted when its title matched the name.
+- **company-setup / source-discovery:** category podcasts are judged on their feed description and recent
+  episodes. The run had proposed a security news show, a conversion-rate marketing show and an audiobook for
+  "CI/CD", "test optimization" and "package management".
+
 ## 2026-10-13 (review page)
 
 - **company-setup:** the review page is binned by company (tracked company first, then each competitor in its own

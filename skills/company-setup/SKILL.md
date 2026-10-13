@@ -53,11 +53,18 @@ and news search terms for every company, product and key person.
      competing products only.
    Names are tidied ("GitHub Actions (GitHub)" → "GitHub Actions") and a competitor found twice, by name or by
    website, is merged into one record.
+   Every competitor's website is **confirmed** before it's used, wherever it came from (the model, a search
+   result, or a guessed address like `name.com`): the page must name the company, and a model judges from its
+   opening text whether it's the site of a company doing what this competitor does (without a model, the page must
+   mention what it does). `depot.com` is a home-improvement store, so it's rejected and `depot.dev` is found. If no
+   candidate confirms, the competitor is recorded without a website rather than with a wrong one.
    When the competing product belongs to a much bigger company (e.g. Azure Pipelines at Microsoft), it's
    profiled from the product's own page, not the parent company's.
 5. **Find channels:** the company's own shows in Apple's podcast directory and its YouTube channel. The publisher
    or channel name must be the company itself, so namesakes ("Eddie Trunk" for Trunk) and fan shows are left
-   out. Also recently active shows about its categories.
+   out. Also recently active shows about its categories: the directory matches words loosely, so each candidate's
+   feed description and latest episode titles are judged, in one model call per category, and shows that only
+   share a word with the category (security news for "CI/CD", marketing, audiobooks) are left out.
 6. **Write search terms** in Google News syntax. Names that are common words get context
    (e.g. `"Harness" ("software delivery" OR CI)`).
 7. **Propose everything** with its source page and a confidence level:
