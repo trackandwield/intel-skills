@@ -5,7 +5,7 @@ description: Draft a battlecard (or one-pager, comparison, talking points) compa
 
 # Battlecard (grounded asset generation)
 
-**Status:** choosing built (competitors, sections, collection plan); drafting designed · **Needs:** company-setup, this-is-that, ideal-customer-profile, fact-freshness, brand-guide
+**Status:** choosing and collecting built (logos, reviews, trust pages, pricing and story gaps); drafting designed · **Needs:** company-setup, this-is-that, ideal-customer-profile, fact-freshness, brand-guide
 
 ## Inputs
 
@@ -51,6 +51,24 @@ For the chosen competitors and sections, a plan lists each section as **ready**,
 competitor, and the collectors still needed: ones that don't exist yet (reviews, comparison pages, trust pages,
 feature lists...) and existing ones that found nothing for some competitors. Win/loss and field notes aren't on
 the web and need an internal source.
+
+## Collecting for the choice
+
+Once competitors and sections are chosen, collection runs only what that choice needs, for those competitors:
+
+- **Logo** for every card's header: the SVG or image in the competitor's site header (images in "trusted by"
+  logo walls further down are ignored, since those are customers' logos), else its app icon. Saved inside the
+  record so cards work offline.
+- **Reviews and community:** review sites (G2, TrustRadius, Capterra, Gartner Peer Insights, PeerSpot) and
+  developer communities (Reddit, Hacker News), grouped by a model into strengths and weaknesses by theme. Every
+  quote must appear word for word in the result it cites, or the point is dropped. A theme backed by more
+  sources counts more.
+- **Security and compliance:** from the competitor's own trust or security page: certifications, privacy,
+  SSO/SCIM, hosting options, data residency, each with the sentence that states it (checked against the page).
+- **Gaps from setup:** pricing plans and customer stories where company setup found none.
+
+Each collector runs once per competitor per month unless refreshed, so reruns cost only what's new, and the
+spend is recorded per run.
 
 ## How it works
 

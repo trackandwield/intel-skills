@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-14 (battlecard collection)
+
+- **battlecard:** collection for the chosen competitors and sections: logos for every card header, reviews and
+  community posts grouped into strengths and weaknesses, security and compliance facts from trust pages, and
+  the pricing plans and customer stories company setup missed. Review quotes and compliance facts are checked
+  word for word against their sources (the first piece of evidence-checks in use).
+
 ## 2026-10-13 (battlecard choices)
 
 - **battlecard:** the user now chooses which competitors and which sections go on the cards, from an 18-section
