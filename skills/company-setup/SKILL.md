@@ -71,8 +71,12 @@ and news search terms for every company, product and key person.
    - **high:** stated on the company's own page
    - **medium:** reported elsewhere
    - **low:** inferred
-8. **Write a review page** in the company's own brand, binned by company: the tracked company first, then one
-   collapsible section per competitor (direct before adjacent), with a jump list, a filter, sources and what the run cost.
+8. **Collect battlecard material** for the company and its direct competitors: logos, reviews and community
+   posts (strengths and weaknesses with exact quotes), security and compliance from trust pages, and pricing or
+   customer stories missed above (see [battlecard](../battlecard/SKILL.md)).
+9. **Write a review page** in the company's own brand, binned by company: the tracked company first, then one
+   collapsible section per competitor (direct before adjacent), with a jump list, a filter, sources and what the run cost;
+   and a browse page of everything collected, by company and metric, to read and to make battlecards from.
 
 ## Design decisions
 

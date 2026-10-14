@@ -5,7 +5,7 @@ description: Draft a battlecard (or one-pager, comparison, talking points) compa
 
 # Battlecard (grounded asset generation)
 
-**Status:** choosing and collecting built (logos, reviews, trust pages, pricing and story gaps); drafting designed · **Needs:** company-setup, this-is-that, ideal-customer-profile, fact-freshness, brand-guide
+**Status:** built, in testing (collecting at setup, browsing, building in brand or sample style, prompt export) · **Needs:** company-setup, this-is-that, ideal-customer-profile, fact-freshness, brand-guide
 
 ## Inputs
 
@@ -15,10 +15,15 @@ description: Draft a battlecard (or one-pager, comparison, talking points) compa
   call) or **deep** (everything, for product marketing). Header and sources are on every card.
 - **Audience:** e.g. CTO, CFO, engineering manager. The same facts are framed differently for each: cost and ROI
   for a CFO, architecture and integration for a CTO.
-- **Example assets:** past assets of that type, so the draft follows an established format and voice
+- **Style:** the tracked company's brand guide, or **the user's own sample battlecards** (HTML, Markdown, Word,
+  PowerPoint, PDF, images), which become the style guide.
 
-The choice is saved per tracked company, and a picker page shows, for each competitor, how many of the chosen
-sections have data today.
+## Collect first, build on request
+
+Everything a card can use is collected when the company is set up, kept, and shown on one browse page, binned
+by company, with the source of every fact. The user ticks the companies and metrics (sections) they care about
+and reads the facts directly; no card is built until they ask. The same selection then drives either way of
+making cards.
 
 ## Section catalog
 
@@ -70,14 +75,35 @@ Once competitors and sections are chosen, collection runs only what that choice 
 Each collector runs once per competitor per month unless refreshed, so reruns cost only what's new, and the
 spend is recorded per run.
 
-## How it works
+## Two ways to make the cards
 
-1. **Retrieve** the structured facts for both products, filtered by audience relevance.
-2. **Draft** against the example assets, so the format stays fixed and only the content is written.
-3. **Check freshness:** hand the exact list of facts used (claim, source, date) to fact-freshness, which
-   re-checks anything past its staleness window. Pricing and features age fast; founding dates don't.
-4. **Flag** any claim that couldn't be verified, instead of shipping it silently.
-5. **Lay it out** in the company's brand (brand-guide).
+### 1. Built by the engine
+
+One page per chosen competitor, the tracked company vs that competitor:
+
+- **Data sections** (pricing, strengths, weaknesses, security, recent moves...) list the collected facts as they
+  are, each numbered to its source, with a source list at the bottom of the card.
+- **Written sections** (quick take, landmine questions, objection handling) are drafted by a model from the same
+  numbered facts, both sides. Every point must cite the facts it rests on; points citing nothing (or a fact
+  that doesn't exist) are dropped.
+- **Empty sections say so** ("not collected yet: needs feature lists") instead of being filled in.
+- **Styled** with the brand's colors, fonts, logo and voice, or with the samples' colors, fonts, own headings,
+  section order, tone and length. Prints to one or two pages.
+
+### 2. A prompt for any AI agent
+
+A single prompt the user gives to whatever agent they use: the task and rules (use only these facts, cite them,
+write "No data yet" for gaps, quote reviewers exactly), the card structure in order, the style guide (brand or
+samples), and every fact grouped by company and section with numbered sources; plus an attachments folder with
+both companies' logos and the sample cards. The agent can then lay the cards out in its own tools (slides,
+documents) while staying grounded.
+
+## Sample battlecards as the style guide
+
+The user's own cards are read for what can be measured, in code: colors and fonts from HTML CSS, Word and
+PowerPoint themes, and PDF font names; headings and their order from the document structure. A model then maps
+each heading to a catalog section and describes the tone, length, layout and conventions to keep. Images can't
+be read for text; they travel with the prompt instead.
 
 ## Output
 

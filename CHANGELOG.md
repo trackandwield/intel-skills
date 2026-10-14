@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-14 (collect at setup, browse, two ways to build)
+
+- **company-setup:** also collects battlecard material at initialization (logos, reviews, trust pages, pricing
+  and story gaps) for the company and its direct competitors.
+- **battlecard:** a browse page shows everything collected, by company and metric, with sources; nothing is built
+  until asked. Cards can be built by the engine (brand style or the user's own sample cards as the style
+  guide), or exported as a prompt with all facts, sources, the style guide, logos and samples for any AI agent.
+  Written sections must cite collected facts or they're dropped.
+
 ## 2026-10-14 (battlecard collection)
 
 - **battlecard:** collection for the chosen competitors and sections: logos for every card header, reviews and
