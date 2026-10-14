@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-14 (after the first live prompt export)
+
+Reviewing the first real export (Buildkite vs 11 competitors, 12,000 words, 150 sources) led to:
+
+- **battlecard:** for a product inside a bigger company (GitHub Actions, Bamboo, TeamCity), facts about the parent
+  are labelled as such and the parent's other plans (Copilot) aren't shown as its pricing; pricing is looked up
+  for the competing product itself. Recent moves are limited to the last 12 months (founding dates were showing
+  up as "recent"). Only competing products are listed under "where we meet them" (whole product catalogs were).
+  Each competitor gets the tracked company's customer stories that mention it, as switch proof points.
+- **battlecard collect:** collects everything, for the tracked company too, instead of only what the chosen
+  sections needed; security facts had been skipped when that section wasn't chosen.
+- **company-setup:** profile facts cite the company's own site rather than the list that first named it.
+
 ## 2026-10-14 (collect at setup, browse, two ways to build)
 
 - **company-setup:** also collects battlecard material at initialization (logos, reviews, trust pages, pricing
