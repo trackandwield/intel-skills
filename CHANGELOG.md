@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-20 (a folder per tracked company)
+
+- **company-setup / battlecard:** everything specific to a tracked company (search terms, brand guide, review and
+  browse pages, battlecard choices, samples, built cards, exported prompt) lives in that company's own folder,
+  with a read-only view of its slice of the shared research and source lists. Sources and research stay in one
+  master store, tagged by company, so nothing is collected twice when companies overlap.
+
 ## 2026-10-14 (after the first live prompt export)
 
 Reviewing the first real export (Buildkite vs 11 competitors, 12,000 words, 150 sources) led to:

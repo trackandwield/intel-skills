@@ -80,6 +80,10 @@ and news search terms for every company, product and key person.
 
 ## Design decisions
 
+- **One folder per tracked company, shared master lists underneath:** each company gets its own folder (search
+  terms, brand, reports, battlecards, and a readable view of its slice of the research), while sources and
+  research live once in shared master lists tagged by company. Two tracked companies never collect the same
+  podcast twice or research a shared competitor twice.
 - **Proposed → approved:** discovery is noisy, so a person approves before anything is tracked; rejected items
   are remembered so they aren't proposed again. A wrong match can be rejected with everything found about it in
   one step, or just its people (for a competitor that's right but too big to profile person by person).
