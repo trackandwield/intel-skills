@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-09 (podcast transcription with name checks)
+
+- **transcription:** podcast audio is transcribed locally with Whisper on the GPU. Each episode's names (show,
+  title, show notes) are given to Whisper first; misheard names are then caught by spelling and sound, confirmed
+  by listening to that stretch again with the name expected (or by the show notes, or a local-model review) and
+  fixed everywhere; unconfirmed ones stay suggestions. Confirmed mishearings and new names feed a growing
+  vocabulary, reviewed by a person, and old transcripts are rechecked against it.
+
 ## 2026-10-20 (a folder per tracked company)
 
 - **company-setup / battlecard:** everything specific to a tracked company (search terms, brand guide, review and
