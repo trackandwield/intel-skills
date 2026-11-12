@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-12 (search, ads, and the daily run)
+
+- **passage-search (new):** transcripts become timestamped passages with a meaning index and an exact-word index,
+  tagged with the companies, products and people they mention; ads are stored apart and skipped by default.
+- **ad-watch (new):** ad breaks are found and split into single ads; ads by tracked companies and competitors
+  are kept as campaigns (message, claims, offer, audience, placements), with new campaigns and changes flagged.
+- **transcription:** names in transcripts are reviewed by a local model chosen by scoring candidate models on
+  names with known answers (the one that "corrected" right names lost); videos with no captions can be
+  transcribed too (opt-in); Whisper is no longer given a word list up front on long episodes, after it read the
+  list back instead of the speech, and looping stretches are transcribed again.
+- **run order:** a daily run in stages that share one GPU (fetch, translation, speech recognition, local
+  model, matching, embedding, report), resumable where it stopped.
+
 ## 2026-11-09 (podcast transcription with name checks)
 
 - **transcription:** podcast audio is transcribed locally with Whisper on the GPU. Each episode's names (show,
